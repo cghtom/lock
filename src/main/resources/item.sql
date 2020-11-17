@@ -1,0 +1,19 @@
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS `item`;
+CREATE TABLE `item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gmt_create` timestamp NULL DEFAULT NULL,
+  `gmt_update` timestamp NULL DEFAULT NULL,
+  `number` int(11) DEFAULT '0',
+  `version` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+
+BEGIN;
+INSERT INTO `item` VALUES (1, '2020-11-17 13:22:06', '2020-11-17 13:22:09', 10000, 0);
+COMMIT;
+
+SET FOREIGN_KEY_CHECKS = 1;
